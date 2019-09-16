@@ -1,0 +1,4 @@
+Jimmy	Cook	65	Main St.	Stony Brook	NY	11799
+John	Smith	30	Townsend Rd.	Port Washington	NJ	12345
+Alice	Wong	10	Highland Park	Moriston	MI	98765
+Kathy	Lee	118	Robinson Lane	Watertown	NJ	13579
