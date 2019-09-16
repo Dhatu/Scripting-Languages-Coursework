@@ -1,0 +1,36 @@
+(a) Find a pattern that removes any white spaces from the start and end of a line. Note: For
+this part of the question modify the 1.f script so that it prints the modified input string to
+STDOUT.
+
+1)s/\s//g
+
+2)"My name is Sudhin	Domala" => "MynameisSudhinDomala"
+  "Devil	May	Cry" => "DevilMayCry"
+
+
+(b) Find a pattern that matches any line of input that has the same word (note it is word, not
+pattern) repeated two or more times in a row. Assume that consecutive words are separated
+by one or two spaces
+
+1)(\w+)\s{1,2}\1
+2) "one two two one"
+   "three  three three  four"
+
+
+(c) Find a pattern that matches a line in which every word is surrounded by spaces. An
+empty line always matches.
+
+1)(\s+\w+\s+)*/g
+
+2) " This is question three on the homework "
+   " tic tac toe "
+
+
+(d) Find a pattern that matches a line in which every word is adjacent to a space. An empty
+line always matches.
+
+1) (\s\w+ | \w+\s)/g
+
+2) "string example"
+   "stringexamplenumber stringexamplenumber 2"
+

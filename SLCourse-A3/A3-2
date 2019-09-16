@@ -1,0 +1,40 @@
+(a) /"([^"]*)"/
+
+1) "(any number 0 or more instances of things that are not ")"
+
+2) "HelloWorld" , "Howdy"
+
+(b) /[-+]?\d+(\.\d*)?F\b/ 
+
+1) (any 0 or 1 instance of -+)(any 1 to more instances of a number from 0 to 9)
+   (.(any 0 to more instances of a number from 0 to 9) expression  that can exist or not)F(boundary)
+
+2) "-+"4.6F " , "456F "
+
+(c) /(\D{2,}).*\[\1\]/ 
+
+1)(any 2 or more non-digit instances)(any type & number of instances prior to next expression)[1]
+
+2)"ca1b34o[1]" , "vf2!3A4[1]"
+
+(d) /^[0-9]+\/\d+([+\-*\/]\=|([+]{2}|[-]{2}));$/ 
+
+1) (beginning of string)(any 1 or more instances of things that are numbers in range [0-9])/(any 1 or more instances within [0-9])
+  (any character that is the following: +-*\/)\= or  (++ or --));(has to be end of string)
+
+2) "6829/2948+\=;" ; "12/4--;"
+
+(e) s/(#?)1|one/[\1January]/ig 
+
+1)substitute ( ((a instance of # or none)1) or one) with ( a character that is same as ones in [\1January]) 
+	all of this is case insensitive and global (allows for multiple substiutions)
+
+2)"#1" => "J" 
+  "iamtheone,iamthe#1" => "iamthen,iamthey"
+
+(f) /((.*?)\d)\s\2/ 
+
+1) (some characters before or none)(a number btwn (0-9))(a whitespace character)(same expression of the first paranthesis (group 2))
+
+2) "night&day4 night&day" ; "7 "
+

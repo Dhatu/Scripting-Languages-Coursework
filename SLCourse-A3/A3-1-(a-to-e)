@@ -1,0 +1,39 @@
+a)p|\s|r
+
+1. dancing" "room 
+2. no match
+3. "r"eport 
+4. ca"r"d
+5. 'li"r"r train' 
+
+b)[0-8]{3}
+
+1. cse"337"
+2. class"201"7 
+3. 3-24-"201"7
+4. "256".781 
+5. 905-"381"-547
+
+c)c.*
+
+1. "cc"
+2. ro"ck"
+3. "coca-coloa"
+4. <"c#>"
+5. rubik's "cube"
+
+d)\bbook\B
+
+1. "book"store
+2. "book"ing
+3. no match
+4. "returned "book"s' (2nd and 3rd " is match)
+5. no match
+
+e)[^O]*o+
+
+1. "balloo"ns
+2. no match
+3. "booksto"re
+4. ""Loo"k" (the first to the third " is the match)
+5."PoolRo"OM
